@@ -14,9 +14,13 @@ const Student = function (name, age, course) {
   this.course = course;
 };
 
+// Linking prototypes
+Student.prototype = Object.create(Person.prototype);
+
 Student.prototype.introduce = function () {
   console.log(`Hi my name is ${this.name} and I study ${this.course}`);
 };
 
 const mendez = new Student('Mendez', 2003, 'JavaScript');
 mendez.introduce();
+mendez.calcAge();
