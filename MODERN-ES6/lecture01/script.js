@@ -25,8 +25,18 @@ console.log('Importing module');
 
 // console.log(cart);
 
-const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+const solicitar = async () => {
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const data = await response.json();
+  return {
+    title: data.at(-1).title,
+    body: data.at(-1).body,
+  };
+};
 
-const data = await response.json();
+// No es la mejor forma
+// const lastPost = solicitar();
+// console.log(lastPost.then((last) => console.log(last)));
 
-console.log(data);
+const lastPost = await solicitar();
+console.log(lastPost);
