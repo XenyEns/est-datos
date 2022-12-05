@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Xenia Padilla" />
+    <meta name="description" content="This is a recipe web page for practice" />
+    <title>Recipes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./assets/img/logo.png" alt="logo" />
+      <div class="header__text">
+        <h1>Food Recipes</h1>
+        <h3>Learn to cook</h3>
+      </div>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Recipes</li>
+          <li>About us</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="main__search">
+        <div class="main__search-input">
+          <input type="text" placeholder="Search food recipe" />
+          <img src="./assets/icons/busqueda.png" alt="" />
+        </div>
+        <div class="main__search-buttons">
+          <button>Search</button>
+          <button>Clear</button>
+        </div>
+      </section>
+
+      <div class="main__data" id="data"></div>
+    </main>
+    <footer>
+      <div class="footer__title" id="f-title"></div>
+      <div class="footer__socialnetwork">
+        <img src="./assets/icons/facebook.svg" alt="facebook" />
+        <img src="./assets/icons/twitter.svg" alt="facebook" />
+      </div>
+    </footer>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
